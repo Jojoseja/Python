@@ -1,2 +1,2 @@
 import Championships
-Championships.Championship(10, 5)
+Championships.Championship(10, 15)

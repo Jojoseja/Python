@@ -4,13 +4,13 @@ class Cir:
         self.length = length
 
 
-alg = Cir("Algarve", 4600)
-bah = Cir("Bahrain", 5400)
-baku = Cir("Baku", 6000)
-bar = Cir("Barcelona", 4700)
-amer = Cir("Circuit de las Americas", 5500)
-dub = Cir("Dubai", 5400)
-abu = Cir("Abu Dhabi", 5300)
+alg = Cir("Algarve", 4621)
+bah = Cir("Bahrain GP", 5412)
+baku = Cir("Baku", 6003)
+bar = Cir("Barcelona GP", 4700)
+amer = Cir("Circuit de las Americas", 5513)
+dub = Cir("Dubai GP", 5400)
+abu = Cir("Yas Marina", 5300)
 fuj = Cir("Fuji Speedway", 4600)
 hok = Cir("Hockenheimring", 4600)
 hun = Cir("Hungaroring", 4400)
@@ -42,12 +42,18 @@ spa = Cir("Spa Francorchamps", 7000)
 suz = Cir("Suzuka", 5800)
 val = Cir("Valencia", 4100)
 zan = Cir("Zandvoort", 4300)
-bue = Cir("Buenos Aires", 4300)
-jer = Cir("Jerez", 4400)
+bue = Cir("Buenos Aires, 06", 4260)
+jer = Cir("Jerez", 4428)
 sval = Cir("Street Valencia Circuit", 5419)
 brno = Cir("Brno", 5403)
+bath = Cir("Bathurst", 6213)
+sat = Cir("Circuit de la Sarthe with Chicane", 13600)
+nord = Cir("Nordschleife", 20832)
+day = Cir("Daytona Road Course", 5729)
+lag = Cir("Laguna Seca", 3602)
+bra = Cir("Brands Hatch", 3908)
 
 circuitos = [alg, bah, baku, bar, amer, dub, abu, fuj, hok, hun, imo, inte, ist,
              jed, veg, los, mac, mag, mel, mex, mia, mona, mont, monz, mug, nur, pau,
              red, seb, sep, sha, sil, sin, soc, spa, suz, val, zan, bue, jer, sval,
-             brno]
+             brno, bath, sat, nord, day, lag, bra]
