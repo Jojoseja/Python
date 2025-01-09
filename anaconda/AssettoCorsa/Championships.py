@@ -7,15 +7,27 @@ import random
 
 
 # circ = Numero de circuitos; min = minutos aprox por carrera, siendo 90 min aprox el tiempo real
-def Championship(circ, min):
+def Championship(circList, min, adjuster):
     def contador(tiempo):
-        return tiempo / (90 / 305000)
+        return tiempo / (90 / adjuster)
     total_len = contador(min)
     cont = 0
-    for i in range(circ):
-        copy = circuits.circuitos
+    for i in circList:
         cont += 1
-        a = random.choice(copy)
-        b = copy.index(a)
-        copy.pop(b)
-        print(f"{cont}. {a.name}, {math.ceil(total_len / a.length)} vueltas" )
+        a = random.choice(circList)
+        print(f"{cont}. {a.name}, {math.ceil(total_len / a.length)} vueltas")
+
+def CustomChampionship(circList,races, min, dist):
+    def contador(tiempo):
+        return tiempo / (90 / dist)
+    total_len = contador(min)
+    cont = 0
+    usedCircuits = []
+    while cont < races:
+        a = random.choice(circList)
+        if a in usedCircuits:
+            pass
+        else:
+            usedCircuits.append(a)
+            cont += 1
+            print(f"{cont}. {a.name}, {math.ceil(total_len / a.length)} vueltas")
