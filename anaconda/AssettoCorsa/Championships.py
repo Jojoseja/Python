@@ -14,8 +14,7 @@ def Championship(circList, min, adjuster):
     cont = 0
     for i in circList:
         cont += 1
-        a = random.choice(circList)
-        print(f"{cont}. {a.name}, {math.ceil(total_len / a.length)} vueltas")
+        print(f"{cont}. {i.name}, {math.ceil(total_len / i.length)} vueltas")
 
 def CustomChampionship(circList,races, min, dist):
     def contador(tiempo):

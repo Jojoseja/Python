@@ -12,10 +12,10 @@ def menu():
     menu_boolean = True
     while menu_boolean:
         if a == 1:
-            Championships.Championship(circuits.circuitos, 13, 305000)
+            Championships.CustomChampionship(circuits.circuitos, 13, 20,  305000)
             break
         if a == 2:
-            Championships.CustomChampionship(circuits.f12024, 5, 20, 305000)
+            Championships.Championship(circuits.f12024, 20, 305000)
             break
         if a == 0:
             menu_boolean = False
