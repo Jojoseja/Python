@@ -7,9 +7,9 @@ import random
 
 
 # circ = Numero de circuitos; min = minutos aprox por carrera, siendo 90 min aprox el tiempo real
-def Championship(circList, min, adjuster):
+def Championship(circList, min, dist):
     def contador(tiempo):
-        return tiempo / (90 / adjuster)
+        return tiempo / (90 / dist)
     total_len = contador(min)
     cont = 0
     for i in circList:

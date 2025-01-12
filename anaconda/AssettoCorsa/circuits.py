@@ -58,11 +58,15 @@ kor = Cir("Korea International Circuit", 5615)
 ara = Cir("Motorland Aragon", 5345)
 indi = Cir("Indianapolis", 4018)
 est = Cir("Estoril", 4138)
+perg = Cir("Pergusa", 4950)
+misa = Cir("Misano", 4011)
+mad = Cir("Madrid", 5444)
 
 circuitos = [alg, bah, baku, bar, amer, dub, abu, fuj, hok, hun, imo, inte, ist,
              jed, veg, lus, mac, mag, mel, mex, mia, mona, mont, monz, mug, nur, pau,
              red, seb, sep, sha, sil, sin, soc, spa, suz, val, zan, bue, jer, sval,
-             brno, bath, sar, nord, day, lag, bra, ind, igo, kor, ara, indi, est]
+             brno, bath, sar, nord, day, lag, bra, ind, igo, kor, ara, indi, est, perg,
+             misa]
 
 f12024 = [bah, jed, mel, suz, sha, mia, imo, mona, mont, bar, red, sil, hun,
           spa, zan, monz, baku, sin, amer, mex, inte, veg, lus, abu]
