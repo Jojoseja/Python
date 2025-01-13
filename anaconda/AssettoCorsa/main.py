@@ -1,24 +1,23 @@
 import Championships
 import circuits
 import math
-#F1 Dist 305000
-#Championships.Championship(circuits.circuitos, 13, 305000)
-#Championships.CustomChampionship(circuits.f12024, 5, 20, 305000)
-#Boton Cambiar Ajustes
+
+
 def intro():
-    print("Pulsa 1 para torneo random de una lista de circuitos")
-    print("Pulsa 2 para generar el número de vueltas de un torneo ya hecho")
+    print("Pulsa 1 para generar un torneo a partir de una lista")
+    print("Pulsa 2 para generar el un torneo de N vueltas de una pool de circuitos")
     print("Pulsa 3 para cambiar ajustes")
-    print("Pulsa 4 para Generar Lista")
-    print("Pulsa 5 para Imprimir Lista")
+    print("Pulsa 4 para volver a imprimir la Lista")
+    print("Pulsa 5 para pasar el torneo a la lista de circuitos")
+    print("Pulsa 6 para revisar un torneo en concreto")
     print("Pulsa 0 para cerrar el menu")
 
 
-def ajustes(ra, mi, dis):
-    races = ra
-    minutes = mi
-    distance = dis
+test = [circuits.nord]
+
+
 def menu():
+    global test
     races = 5
     minutes = 20
     distance = 305000
@@ -27,23 +26,25 @@ def menu():
     while menu_boolean:
         a = int(input())
         if a == 1:
-            Championships.CustomChampionship(circuits.circuitos, races, minutes,  distance)
+            Championships.printchampionship(circuits.f12024, minutes, distance)
         elif a == 2:
-            Championships.Championship(circuits.f12024, minutes, distance)
+            test = Championships.returnchampionship(circuits.circuitos, races)
+            Championships.printchampionship(test, minutes, distance)
         elif a == 3:
-            races = int(input("Numero Carreras: "))
-            minutes = int(input("Numero Minutos por Carrera Aprox: "))
-            distance = int(input("Numero Distancia Real Carrera (305000 para F1): "))
+            races = int(input(f"Numero Carreras (el anterior era {races}): "))
+            minutes = int(input(f"Numero Minutos por Carrera Aprox (el anterior era {minutes}): "))
+            distance = int(input(f"Numero Distancia Real Carrera (el anterior era {distance}): "))
         elif a == 4:
-            test = Championships.ReturnChampionship(circuits.circuitos,5)
-            for i in test:
-                print(i.name)
-        elif a == 5:
             cont = 0
-            for i in test:
-                cont += 1
-                total_len = Championships.contador(minutes, distance)
-                print(f"{cont}. {i.name}, {math.ceil(total_len / i.length)} vueltas")
+            Championships.printchampionship(test, minutes, distance)
+        elif a == 5:
+            with open("CircList.txt", "w") as file:
+                cont = 0
+                for i in test:
+                    cont += 1
+                    aux = Championships.contador(minutes, distance)
+                    file.write(f"{cont}. {i.name}, {math.ceil(aux / i.length)} vueltas \n")
+            print("Hecho!")
         elif a == 0:
             menu_boolean = False
         else:
