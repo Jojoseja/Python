@@ -9,6 +9,8 @@ def intro():
     print("Pulsa 1 para torneo random de una lista de circuitos")
     print("Pulsa 2 para generar el número de vueltas de un torneo ya hecho")
     print("Pulsa 3 para cambiar ajustes")
+    print("Pulsa 4 para Generar Lista")
+    print("Pulsa 5 para Imprimir Lista")
     print("Pulsa 0 para cerrar el menu")
 
 
@@ -32,6 +34,16 @@ def menu():
             races = int(input("Numero Carreras: "))
             minutes = int(input("Numero Minutos por Carrera Aprox: "))
             distance = int(input("Numero Distancia Real Carrera (305000 para F1): "))
+        elif a == 4:
+            test = Championships.ReturnChampionship(circuits.circuitos,5)
+            for i in test:
+                print(i.name)
+        elif a == 5:
+            cont = 0
+            for i in test:
+                cont += 1
+                total_len = Championships.contador(minutes, distance)
+                print(f"{cont}. {i.name}, {math.ceil(total_len / i.length)} vueltas")
         elif a == 0:
             menu_boolean = False
         else:

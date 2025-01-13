@@ -38,7 +38,7 @@ sha = Cir("Shanghai", 5500)
 sil = Cir("Silverstone", 5900)
 sin = Cir("Singapore", 5100)
 soc = Cir("Sochi", 5800)
-spa = Cir("Spa Francorchamps", 7000)
+spa = Cir("Spa Francorchamps", 7004)
 suz = Cir("Suzuka", 5800)
 val = Cir("Valencia", 4100)
 zan = Cir("Zandvoort", 4300)
@@ -66,7 +66,7 @@ circuitos = [alg, bah, baku, bar, amer, dub, abu, fuj, hok, hun, imo, inte, ist,
              jed, veg, lus, mac, mag, mel, mex, mia, mona, mont, monz, mug, nur, pau,
              red, seb, sep, sha, sil, sin, soc, spa, suz, val, zan, bue, jer, sval,
              brno, bath, sar, nord, day, lag, bra, ind, igo, kor, ara, indi, est, perg,
-             misa]
+             misa, mad]
 
 f12024 = [bah, jed, mel, suz, sha, mia, imo, mona, mont, bar, red, sil, hun,
           spa, zan, monz, baku, sin, amer, mex, inte, veg, lus, abu]
