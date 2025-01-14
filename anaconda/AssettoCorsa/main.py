@@ -14,7 +14,7 @@ def intro():
 
 
 test = [circuits.nord]
-
+txtchamps = []
 
 def menu():
     global test
@@ -38,13 +38,18 @@ def menu():
             cont = 0
             Championships.printchampionship(test, minutes, distance)
         elif a == 5:
-            with open("CircList.txt", "w") as file:
+            name = input("Introduce un nombre para el campeonato: ")
+            with open("CircList.txt", "a") as file:
                 cont = 0
+                file.write(f"{name} \n")
                 for i in test:
                     cont += 1
                     aux = Championships.contador(minutes, distance)
-                    file.write(f"{cont}. {i.name}, {math.ceil(aux / i.length)} vueltas \n")
+                    file.write(str(i.name))
             print("Hecho!")
+        elif a == 6:
+            a = circuits.nord
+            print(a.id)
         elif a == 0:
             menu_boolean = False
         else:

@@ -1,7 +1,11 @@
 class Cir:
-    def __init__(self, name, length):
+    counter = 1
+
+    def __init__(self, name, length, counter=None):
         self.name = name
         self.length = length
+        self.id = int(Cir.counter)
+        Cir.counter += 1
 
 
 alg = Cir("Algarve", 4621)
