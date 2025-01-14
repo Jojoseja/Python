@@ -8,8 +8,8 @@ def intro():
     print("Pulsa 2 para generar el un torneo de N vueltas de una pool de circuitos")
     print("Pulsa 3 para cambiar ajustes")
     print("Pulsa 4 para volver a imprimir la Lista")
-    print("Pulsa 5 para pasar el torneo a la lista de circuitos")
-    print("Pulsa 6 para revisar un torneo en concreto")
+    print("Pulsa 5 para pasar el torneo a la lista de torneos")
+    print("Pulsa 6 para revisar un torneo en de la lista de torneos")
     print("Pulsa 0 para cerrar el menu")
 
 
@@ -39,17 +39,19 @@ def menu():
             Championships.printchampionship(test, minutes, distance)
         elif a == 5:
             name = input("Introduce un nombre para el campeonato: ")
-            with open("CircList.txt", "a") as file:
+            with open(f"CircuitOutput/{name}.txt", "w") as file:
                 cont = 0
-                file.write(f"{name} \n")
                 for i in test:
                     cont += 1
-                    aux = Championships.contador(minutes, distance)
-                    file.write(str(i.name))
+                    total_len = Championships.contador(minutes, distance)
+                    file.write(f"{cont}. {i.name}, {math.ceil(total_len / i.length)} vueltas \n")
             print("Hecho!")
         elif a == 6:
-            a = circuits.nord
-            print(a.id)
+            lookfor = input("Nombre del torneo que quieres revisar: ")
+            with open(f"CircuitOutput/{lookfor}.txt", "r") as file:
+                for line in file:
+                    line = line.strip()
+                    print(line)
         elif a == 0:
             menu_boolean = False
         else:
